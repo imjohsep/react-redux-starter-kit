@@ -32,6 +32,8 @@ This server is intended for development only and should not be used as is to hos
 
 ## Make it your own
 
+Run `yarn init` to reconfigure the package.json file.
+Be sure to override any values that don't correspond with your new project.
 
 ## Commands
 
