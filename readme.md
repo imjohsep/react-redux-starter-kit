@@ -16,16 +16,38 @@ This is a super simple example project utilizing React, Redux, and Webpack.
 
 ## Getting Started
 
-Run this at the root of the project and overwrite the package.json
-details that don't correspond to your new project.
+Whenever we clone a project to use in another project there is a lot of
+business we need to take care of to truly make the repo our own. This
+project is designed to make it easy for you to do that.
 
-`npm init`
+## Cloning the Repo
+
+When you `git clone` this project be sure to add your project name on
+the end of the command like so:
+`git clone https://github.com/imjohsep/react-redux-starter-kit.git <my_project_name>`
+
+You will also want to break from the current git directory with `sudo rm -r .git`.
+Then just reinitialize git with `git init`.
+
+## Initializing the Package
+
+Run `npm init` at the root of the project and overwrite the package.json
+details that don't correspond to your new project.
 
 Install all of your dependencies:
 
 `npm install`
 
-Start the app:
+## Alternative Getting Started
+
+Run `yarn init` to reconfigure the package.json file. I prefer yarn to init
+our package because it asks to override more of the package details than npm; in
+addition to all of the performance improvements.
+
+Once our package.json file is updated we can `yarn install` the dependencies listed
+in the yarn.lock file.
+
+## Start the App
 
 `npm start`
 
@@ -33,14 +55,6 @@ That's about it! This boilerplate is ready to go. It is recommended you
 grow accustomed with the HomeContainer and Home Components first. Then
 work your way over to the Counter Container and Component, as these
 more fully implement Redux action, reducers, and state.
-
-## Alternative Getting Started
-
-Run `yarn init` to reconfigure the package.json file.
-Be sure to override any values that don't correspond with your new project.
-Common vales you should override are the repository, author, and project details.
-Once our package.json file is updated we can `yarn install` the dependencies listed
-in the yarn.lock file.
 
 ## Commands
 
