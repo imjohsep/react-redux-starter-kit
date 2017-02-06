@@ -2,9 +2,9 @@
   "name": "react-redux-starter-kit",
   "version": "0.0.1",
   "description": "Starter kit for your react/redux project",
-  "author": "Joseph Watters",
+  "author": "",
   "license": "ISC",
-  "repository": "https://github.com/imjohsep/react-redux-starter-kit.git",
+  "repository": "",
   "scripts": {
     "start": "DEBUG=app* NODE_ENV=development $(npm bin)/babel-node bin/server.js",
     "clean": "rm -rf dist/*",
