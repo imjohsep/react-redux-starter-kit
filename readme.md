@@ -61,3 +61,9 @@ You should look there to see what they are doing in case you need to make any mo
 | `npm run test:integration(:watch)` | executes integration tests |
 | `npm run test:karma(:watch)`       | __@todo__ executes tests using the Karma test runner
 
+## Switching your Favicon
+
+Generate the complete range of images using this [site](http://www.favicomatic.com/).
+
+Move all of the generated files into the `src/static/favicon` directory and replace
+the link tags in the `src/index.html` file.
