@@ -1,5 +1,3 @@
-![](https://bitbucket.aliph.com/projects/TDT/repos/react-redux-kit/browse/src/static/favicon/apple-touch-icon-120x120.png?at=refs%2Fheads%2Fmaster&raw)
-
 # React Redux Starter Kit
 
 __tl;dr;__ This is a quick start project for getting up and running with React, Redux, and Webpack. It contains a quick example application with some tests as reference material to get you out of the gate quickly.

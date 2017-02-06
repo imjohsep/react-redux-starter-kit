@@ -7,6 +7,7 @@ import Router from 'routes'
 import store from 'reducers'
 import { hashHistory } from 'react-router'
 
+// @see https://github.com/zilverline/react-tap-event-plugin
 injectTapEventPlugin()
 
 const history = syncHistoryWithStore(hashHistory, store)
