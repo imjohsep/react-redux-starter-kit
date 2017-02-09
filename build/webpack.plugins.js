@@ -42,7 +42,7 @@ export const notify = () => new WebpackNotifierPlugin({
 
 export const manifest = () => new AssetsPlugin({
     filename: 'manifest.json',
-    path: config.dir_dist(),
+    path: config.dir_dist,
     fullPath: false
 })
 
