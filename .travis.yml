@@ -1,0 +1,13 @@
+branches:
+  only:
+    - master
+language: node_js
+node_js:
+  - "5.1"
+script: 
+  - npm run compile
+deploy:
+  provider: heroku
+  api_key: ""
+  app: rabbit-messenger
+  skip_cleanup: true
