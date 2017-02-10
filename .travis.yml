@@ -8,6 +8,6 @@ script:
   - npm run compile
 deploy:
   provider: heroku
-  api_key: ""
+  api_key: "b94f507f-eb6a-4e01-9df9-43d3264a5c82"
   app: rabbit-messenger
   skip_cleanup: true
