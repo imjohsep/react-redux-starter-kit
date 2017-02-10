@@ -1,13 +1,14 @@
 branches:
   only:
-    - master
+  - master
 language: node_js
 node_js:
-  - "5.1"
-script: 
-  - npm run compile
+- '7.5'
+script:
+- npm run compile
 deploy:
   provider: heroku
-  api_key: "b94f507f-eb6a-4e01-9df9-43d3264a5c82"
-  app: rabbit-messenger
+  app: react-redux-starter-kit
   skip_cleanup: true
+  api_key:
+    secure: S5Ukl+UJotL8eAy77iAkdWd9yj4nN/C6Al5aDzEUzt44rroJ7VPnFXsnwHDap2ywMuAAb86lxiOIYoj5bepYU28UOAk4ZIdo57mHWFwD1soSRwkkCdNA2XfENCCid32Rvf871sM4Of6Ch1CGsV5V5UFntkzOekR48q/bvL/J4i2v4fmH1ZnTM+TPueMIxg418n1uFhbyvDceIt0Zsx1Gw7UJBR3fWOjfMcfM1f3evNZUz5dR6S2l2yd3pfMyIE6aM4s1377dPCvyOjBkicT7HYnGy+1uk3B2iiHvuN5rrV/k9m7G/h4MgqPLpwl6bcZQaqoUj4mSHqA3VJy1P802MLH4eXyrlSvqtI+rWl0aA/IM0rrpl7r3dM05mXXaYpTSiAyNBZwFxI+B7WP8FcO+v8bFaDeCulhVv2VE2EbB598eG6RNQPvBL+vX5KMNNPaX8Tg4RrQpTSp9c03RV2C6c5MvWyv8QTbhSXqoYwpGfUv4LBWvTCePfNXtwB7ZujVJE9XTouKrBQK4nqLveWhQH2iiB7s8SNAMbKnoZINZp+fc9KJ24hSKq8c02s4h3VJ6ZHnRAdktLyydQIcaritWKlEIC8kryYUrTFep473WdbNjSjTgTfYJDcGuANLoemJdtkbhM8BNlVaqjKy9jjshOXkuNUMGHxTNMR+plYj4GXI=
