@@ -13,14 +13,13 @@ This is a super simple example project utilizing React, Redux, and Webpack.
 * [File Loading](https://github.com/webpack/file-loader): Load images, fonts, etc.
 * [Testing!](https://mochajs.org/): Because they make coding more rewarding.
 
-
 ## Getting Started
 
-Whenever we clone a project to use in another project there is a lot of
-business we need to take care of to truly make the repo our own. This
-project is designed to make it easy for you to do that.
+There is a lot of business to take care of to make a cloned repo our own.
+This project reduces some of setup business to provide a clean slat for
+your new project.
 
-## Cloning the Repo
+### Cloning the Repo
 
 When you `git clone` this project be sure to add your project name on
 the end of the command like so:
@@ -29,7 +28,7 @@ the end of the command like so:
 You will also want to break from the current git directory with `sudo rm -r .git`.
 Then just reinitialize git with `git init`.
 
-## Initializing the Package
+### Initializing the Package
 
 Run `npm init` at the root of the project and overwrite the package.json
 details that don't correspond to your new project.
@@ -38,14 +37,22 @@ Install all of your dependencies:
 
 `npm install`
 
-## Alternative Getting Started
+### Alternative Initialization
 
 Run `yarn init` to reconfigure the package.json file. I prefer yarn to init
 our package because it asks to override more of the package details than npm; in
 addition to all of the performance improvements.
 
-Once our package.json file is updated we can `yarn install` the dependencies listed
+Once our package.json file is updated you can `yarn install` the dependencies listed
 in the yarn.lock file.
+
+### Deployment
+
+This project comes with a procfile and travis.yml files, so it is setup to deploy
+to heroku with travisci. You can use those services to quickly and freely deploy
+your project, but you will need to updat those configs. See the following:
+
+[Heroku Deployment on Travis](https://docs.travis-ci.com/user/deployment/heroku)
 
 ## Start the App
 

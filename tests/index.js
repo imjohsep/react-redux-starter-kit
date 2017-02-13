@@ -29,19 +29,18 @@ chai.use(chaiAsPromised)
 
 /**
  * Removing static assets from imports.
- * @todo it would be nice to be able to test these as well but
- *       this requires webpack.
+ * @todo test assets without webpack.
  */
 const ignore = ['.css', '.scss', '.png', '.jpg']
-ignore.forEach(ext => { require.extensions[ext] = () => null });
+ignore.forEach(ext => { require.extensions[ext] = () => null })
 
 const patterns = {
     'unit': path.join(__dirname, '/unit/**/test-*.js'),
     'integration': path.join(__dirname, '/integration/**/test-*.js'),
     'all': path.join(__dirname, '/**/test-*.js')
-};
+}
 
-let pattern;
+let pattern
 
 if (argv._.includes('unit')) {
     pattern = patterns.unit
@@ -52,10 +51,12 @@ if (argv._.includes('unit')) {
 }
 
 glob(pattern, {}, (err, files) => {
-    files.forEach(file => mocha.addFile(file))
+
+    files.forEach(file => {
+        mocha.addFile(file)
+    })
+
     mocha.run(failures => {
-        process.on('exit', function() {
-            process.exit(failures)
-        })
+        process.exit(failures)
     })
 })
