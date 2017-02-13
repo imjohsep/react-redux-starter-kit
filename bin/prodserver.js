@@ -6,16 +6,16 @@ const app = express()
 
 console.info('\nStarting production server..')
 
-    app.use(express.static(config.utils_paths.base(config.dir_dist)))
+app.use(express.static(config.utils_paths.base(config.dir_dist)))
 
-    app.get('*', function (req, res) {
-        res.sendFile(path.join(config.utils_paths.base(config.dir_dist), 'index.html'))
-    })
+app.get('*', function (req, res) {
+    res.sendFile(path.join(config.utils_paths.base(config.dir_dist), 'index.html'))
+})
 
 
-app.listen(config.server_port, config.server_host, err => {
+app.listen(config.server_port, err => {
     if (err) {
-        return debug(err)
+        console.log(err)
     }
-    console.log(`Listening on http://${config.server_host}:${config.server_port}`)
+    console.log(`Listening on port ${config.server_port}`)
 })
