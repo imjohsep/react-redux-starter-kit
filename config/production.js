@@ -6,5 +6,6 @@ export default () => ({
 		chunks: true,
 		chunkModules: true,
 		colors: true
-	}
+	},
+	server_post: process.env.PORT || 8000
 })
