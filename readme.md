@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/imjohsep/react-redux-starter-kit.svg?branch=master)](https://travis-ci.org/imjohsep/react-redux-starter-kit)
+[![dependencies Status](https://david-dm.org/imjohsep/react-redux-starter-kit/status.svg)](https://david-dm.org/imjohsep/react-redux-starter-kit)
+[![devDependencies Status](https://david-dm.org/imjohsep/react-redux-starter-kit/dev-status.svg)](https://david-dm.org/imjohsep/react-redux-starter-kit?type=dev)
 # React Redux Starter Kit
 
 ## What is this
