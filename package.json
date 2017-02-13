@@ -12,15 +12,7 @@
     "compile": "npm run clean && DEBUG=app* NODE_ENV=production $(npm bin)/babel-node bin/compile",
     "compile:stats": "npm run compile -- -s",
     "check": "$(npm bin)/npm-check -u --skip-unused",
-    "test": "NODE_ENV=test $(npm bin)/babel-node tests/index.js",
-    "test:watch": "NODE_ENV=test node tests/watch.js",
-    "test:coverage": "NODE_ENV=test $(npm bin)/nyc --all $(npm bin)/babel-node tests/index.js --timeout 5000",
-    "test:unit": "NODE_ENV=test $(npm bin)/babel-node tests/index.js unit",
-    "test:unit:watch": "NODE_ENV=test node tests/watch.js unit",
-    "test:integration": "NODE_ENV=test $(npm bin)/babel-node tests/index.js integration",
-    "test:integration:watch": "NODE_ENV=test node tests/watch.js integration",
-    "test:karma": "NODE_ENV=test babel-node $(npm bin)/karma start tests/karma.conf.js --single-run",
-    "test:karma:watch": "NODE_ENV=test $(npm bin)/babel-node $(npm bin)/karma start tests/karma.conf.js"
+    "test": ""
   },
   "main": "src/js/index.js",
   "nyc": {
