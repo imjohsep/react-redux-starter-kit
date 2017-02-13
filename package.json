@@ -7,11 +7,9 @@
   "repository": "",
   "scripts": {
     "start": "DEBUG=app* NODE_ENV=development $(npm bin)/babel-node bin/server.js",
-    "start:prod": "npm run clean && DEBUG=app* NODE_ENV=production $(npm bin)/babel-node bin/compile && NODE_ENV=production $(npm bin)/babel-node bin/server.js",
+    "start:prod": "NODE_ENV=production $(npm bin)/babel-node bin/server.js",
     "clean": "rm -rf dist/*",
     "compile": "npm run clean && DEBUG=app* NODE_ENV=production $(npm bin)/babel-node bin/compile",
-    "compile:stats": "npm run compile -- -s",
-    "check": "$(npm bin)/npm-check -u --skip-unused",
     "test": ""
   },
   "main": "src/js/index.js",

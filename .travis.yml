@@ -4,6 +4,8 @@ branches:
 language: node_js
 node_js:
 - '7.5'
+script:
+- npm run compile
 deploy:
   provider: heroku
   app: react-redux-starter-kit
