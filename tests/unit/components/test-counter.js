@@ -27,7 +27,7 @@ describe('components/counter', () => {
         it('should render current count', () => {
             const {wrapper} = render(props({count: 5}))
             const span = wrapper.find('span')
-            expect(span.text()).to.equal('1')
+            expect(span.text()).to.equal('5')
             wrapper.unmount()
         })
 
