@@ -7,9 +7,7 @@ import webpackConfig from '../build/webpack.config'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 
-const app = express()
 const debug = _debug('app:server')
-const compiler = webpack(webpackConfig)
 
 const serverConfig = {
     publicPath: webpackConfig.output.publicPath,
@@ -22,7 +20,11 @@ const serverConfig = {
 }
 
 debug('Starting development server...')
+
+const app = express()
+const compiler = webpack(webpackConfig)
 const middleware = webpackDevMiddleware(compiler, serverConfig)
+
 app.use(middleware)
 app.use(webpackHotMiddleware(compiler))
 app.use(express.static(config.utils_paths.client('static')))

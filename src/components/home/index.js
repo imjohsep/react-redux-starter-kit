@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
 import styles from './styles.scss'
 
 import { Jumbotron, Button } from 'react-bootstrap'

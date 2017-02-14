@@ -5,6 +5,7 @@ import minimist from 'minimist'
 import webpack from 'webpack'
 import webpackConfig from '../build/webpack.config'
 import config from '../config'
+import ncp from 'ncp'
 
 const debug = _debug('app:compile')
 const argv = minimist(process.argv.slice(2), {
@@ -42,4 +43,7 @@ compiler.run((err, stats) => {
 		}
 		debug('No errors or warnings encountered')
 	}
+
+	debug('Copying static assets')
+	ncp(config.utils_paths.client('static'), config.utils_paths.dist())
 })

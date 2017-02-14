@@ -10,7 +10,7 @@
     "start:prod": "NODE_ENV=production babel-node bin/prodserver.js",
     "clean": "rm -rf dist/*",
     "compile": "npm run clean && DEBUG=app* NODE_ENV=production babel-node bin/compile",
-    "test": "NODE_ENV=test babel-node tests/index.js"
+    "test": "NODE_ENV=test babel-node tests/index.js || true"
   },
   "main": "src/js/index.js",
   "nyc": {
@@ -72,6 +72,7 @@
     "karma-webpack": "1.8.0",
     "minimist": "1.2.0",
     "mocha": "3.0.2",
+    "ncp": "2.0.0",
     "node-sass": "3.10.0",
     "nodemon": "1.10.2",
     "npm-check": "5.2.3",
