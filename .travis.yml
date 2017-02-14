@@ -3,7 +3,8 @@ branches:
   - master
 language: node_js
 node_js:
-- '7.5'
+- "node"
+cache: yarn
 script:
 - npm run compile
 deploy:
