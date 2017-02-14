@@ -5,7 +5,7 @@ language: node_js
 node_js:
 - "node"
 cache: yarn
-after_script:
+after_success:
 - npm run compile
 deploy:
   provider: heroku
