@@ -4,7 +4,7 @@ import path from 'path'
 
 const app = express()
 
-console.info('\nStarting production server..')
+console.info('Starting production server..')
 
 app.use(express.static(config.utils_paths.base(config.dir_dist)))
 
