@@ -1,6 +1,6 @@
-import config from '../config'
-import express from 'express'
-import path from 'path'
+const config = require('../config')
+const express = require('express')
+const path = require('path')
 
 const app = express()
 
