@@ -1,3 +1,3 @@
-export default () => ({
-	compiler_devtool: 'inline-source-map'
+module.exports = config => ({
+    compiler_devtool: false
 })

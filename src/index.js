@@ -6,6 +6,7 @@ import { syncHistoryWithStore } from 'react-router-redux'
 import Router from 'routes'
 import store from 'reducers'
 import { browserHistory } from 'react-router'
+import 'static/favicon'
 
 // @see https://github.com/zilverline/react-tap-event-plugin
 injectTapEventPlugin()
