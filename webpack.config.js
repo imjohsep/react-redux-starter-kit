@@ -15,6 +15,13 @@ const __DEV__ = config.globals.__DEV__
 const __PROD__ = config.globals.__PROD__
 const __TEST__ = config.globals.__TEST__
 
+const makePath = (filename) => {
+    if (process.env.npm_package_version && __PROD__) {
+        return `${process.env.npm_package_version}/${filename}`
+    }
+    return filename
+}
+
 const _postcss = {
     loader: 'postcss-loader',
     options: {
@@ -114,15 +121,31 @@ const webpackConfig = {
             },
             {
                 test: /\.(png|gif)$/,
-                use: ['url-loader?name=img/[name].[ext]&limit=8000']
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8000,
+                        name: makePath('img/[name].[ext]')
+                    }
+                }]
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                use: ['url-loader?name=fonts/[hash].[ext]']
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        name: makePath('fonts/[hash].[ext]')
+                    }
+                }]
             },
             {
                 test: /\.svg$/,
-                use: ['url-loader?name=svg/[hash].ext']
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        name: makePath('svg/[hash].[ext]')
+                    }
+                }]
             }
         ]
     },
