@@ -24,3 +24,5 @@ junit/*
 esdoc/*
 
 yarn-error.log
+
+public/*
