@@ -9,6 +9,5 @@ services:
       - 80:80
     command: > 
       sh -c '
-      npm run compile &&
-      npm run start:prod
+      npm run compile
       '
