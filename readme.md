@@ -1,25 +1,9 @@
+# React Redux Starter Kit
+
 [![Build Status](https://travis-ci.org/imjohsep/react-redux-starter-kit.svg?branch=master)](https://travis-ci.org/imjohsep/react-redux-starter-kit)
 [![dependencies Status](https://david-dm.org/imjohsep/react-redux-starter-kit/status.svg)](https://david-dm.org/imjohsep/react-redux-starter-kit)
 [![devDependencies Status](https://david-dm.org/imjohsep/react-redux-starter-kit/dev-status.svg)](https://david-dm.org/imjohsep/react-redux-starter-kit?type=dev)
-# React Redux Starter Kit
-## Commands
 
-All pre-baked commands are defined in `package.json` and are run through `npm`.
-You should look there to see what they are doing in case you need to make any modification.
-
-
-| Command                            | Purpose                 |
-|------------------------------------|-------------------------|
-| `npm start`                        | starts the local server |
-| `npm run clean`                    | deletes contents of dist directory |
-| `npm run compile`                  | runs `clean` and compiles new build |
-| `npm run compile:stats`            | runs `compile` and additionally outputs json stats file |
-| `npm run check`                    | checks for updates to installed packages |
-| `npm run test(:watch)`             | executes all tests, optionally watch for changes |
-| `npm run test:coverage`            | executes tests and generates coverage report |
-| `npm run test:unit(:watch)`        | executes unit tests |
-| `npm run test:integration(:watch)` | executes integration tests |
-| `npm run test:karma(:watch)`       | __@todo__ executes tests using the Karma test runner
 ## What is this
 
 This is a super simple example project utilizing React, Redux, and Webpack.
