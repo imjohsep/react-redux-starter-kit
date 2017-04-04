@@ -8,4 +8,5 @@ services:
       - ./:/var/www/app:rw
       - /var/www/app/node_modules
     ports:
-      - "3000:3000"
+      - 3000:3000
+    command: [npm, start]

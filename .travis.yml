@@ -1,12 +1,17 @@
 branches:
   only:
   - master
+  - docker_deploy
+sudo: required
+services:
+  - docker
 language: node_js
 node_js:
-- "node"
+  - "node"
 cache: yarn
-after_success:
-- npm run compile
+before_install:
+  - docker-compose -f docker-compose.yml -f docker-compose.prod.yml build
+  - docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
 deploy:
   provider: heroku
   app: react-redux-starter-kit

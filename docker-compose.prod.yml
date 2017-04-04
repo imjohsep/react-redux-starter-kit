@@ -1,0 +1,14 @@
+
+version: '2'
+
+services:
+  client:
+    environment:
+      - PORT=80
+    ports:
+      - 80:80
+    command: > 
+      sh -c '
+      npm run compile &&
+      npm run start:prod
+      '
