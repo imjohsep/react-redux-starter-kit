@@ -11,3 +11,7 @@ COPY package.json $ROOT/
 WORKDIR $ROOT
 
 RUN npm install --loglevel=warn
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
