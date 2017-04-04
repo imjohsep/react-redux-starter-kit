@@ -15,7 +15,7 @@ describe('components/home', () => {
         it('should render default home', () => {
             const { wrapper } = render()
             const h1 = wrapper.find('h1')
-            expect(h1.text()).to.equal('Boilerplate')
+            expect(h1.text()).to.equal('StarterKit')
             wrapper.unmount()
         })
     })

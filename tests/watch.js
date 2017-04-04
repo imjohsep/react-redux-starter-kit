@@ -1,13 +1,11 @@
-var nodemon = require('nodemon');
+const nodemon = require('nodemon');
 
 nodemon({
     args: process.argv,
     script: 'tests/index.js',
-    execMap: {js: 'node_modules/.bin/babel-node'},
-    ext: 'js',
+    execMap: { js: 'node_modules/.bin/babel-node' },
+    ext: 'js jsx',
     watch: ['src/', 'tests/unit', 'tests/integration']
-})
-.on('quit', function() {
-    // This is dumb but it was still running after exit...
+}).on('quit', () => {
     process.exit();
 })

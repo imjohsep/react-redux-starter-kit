@@ -15,7 +15,7 @@ export default class Home extends Component {
         return (
             <Jumbotron className={styles.flex_center}>
                 <img src={image} alt="boilerplate"/>
-                <h1>Boilerplate</h1>
+                <h1>StarterKit</h1>
                 <Button bsStyle="success" bsSize="large">Get Started</Button>
             </Jumbotron>
         )

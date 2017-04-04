@@ -10,7 +10,11 @@
     "start:prod": "NODE_ENV=production babel-node bin/prodserver.js",
     "clean": "rm -rf dist/*",
     "compile": "npm run clean && DEBUG=app* NODE_ENV=production babel-node bin/compile",
-    "test": "NODE_ENV=test babel-node tests/index.js"
+    "test": "NODE_ENV=test babel-node tests/index.js",
+    "test:watch": "DEBUG=app*,test:* NODE_ENV=test node tests/watch.js",
+    "test:unit": "DEBUG=app*,test:* NODE_ENV=test $(npm bin)/babel-node tests/index.js unit",
+    "test:unit:watch": "DEBUG=app*,test:* NODE_ENV=test node tests/watch.js unit",
+    "lint": "$(npm bin)/eslint"
   },
   "main": "src/js/index.js",
   "nyc": {
